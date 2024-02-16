@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+<div class="container">
+<h1>Formulario</h1>
+<form id="customerForm">
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" required>
+<label for="cuit">CUIT:</label>
+<input type="text" id="cuit" pattern="[0-9]{11}" title="Ingrese un CUIT válido (11 dígitos)" required>
+<label for="telefono">Teléfono:</label>
+<input type="tel" id="telefono" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+title="Ingrese un teléfono válido (ej. 123-4567-8901)" required>
+<button type="button" onclick="agregarCliente()">Agregar Cliente</button>
+</form>
+<table id="clientesTable">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>CUIT</th>
+<th>Teléfono</th>
+</tr>
+</thead>
+<tbody id="clientesBody"></tbody>
+</table>
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
